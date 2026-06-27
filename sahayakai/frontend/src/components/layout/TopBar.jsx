@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
-import { Bell } from 'lucide-react';
+import { Bell, Moon, Sun } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useApp } from '../../context/AppContext';
+import { useTheme } from '../../context/ThemeContext';
 import DemoGuideModal from '../modals/DemoGuideModal';
 
 function StatPill({ emoji, count, label, colorClass, pulseKey }) {
@@ -25,6 +26,7 @@ export default function TopBar() {
   const location = useLocation();
   const { id } = useParams();
   const { stats, getCustomerById } = useApp();
+  const { theme, setTheme } = useTheme();
   const [guideOpen, setGuideOpen] = useState(false);
 
   const getTitle = () => {
@@ -85,6 +87,39 @@ export default function TopBar() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-success animate-pulse-live" />
             </span>
             <span className="text-success font-medium">Live</span>
+          </div>
+
+          <div
+            className="flex items-center rounded-lg border border-border p-0.5 bg-elevated/40"
+            role="group"
+            aria-label="Theme"
+          >
+            <button
+              type="button"
+              onClick={() => setTheme('dark')}
+              className={`p-1.5 rounded-md transition-colors ${
+                theme === 'dark'
+                  ? 'bg-surface text-teal shadow-sm'
+                  : 'text-muted hover:text-text-primary'
+              }`}
+              aria-label="Dark mode"
+              aria-pressed={theme === 'dark'}
+            >
+              <Moon size={14} />
+            </button>
+            <button
+              type="button"
+              onClick={() => setTheme('light')}
+              className={`p-1.5 rounded-md transition-colors ${
+                theme === 'light'
+                  ? 'bg-surface text-saffron shadow-sm'
+                  : 'text-muted hover:text-text-primary'
+              }`}
+              aria-label="Light mode"
+              aria-pressed={theme === 'light'}
+            >
+              <Sun size={14} />
+            </button>
           </div>
 
           <button
