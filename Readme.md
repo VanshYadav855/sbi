@@ -1,7 +1,5 @@
 <div align="center">
 
-<img src="screenshots/banner.png" alt="SahayakAI Banner" width="100%" />
-
 # 🏦 SahayakAI
 
 ### AI-Powered Decision Intelligence Platform for SBI Branch Officers
@@ -10,7 +8,6 @@
 [![Vite](https://img.shields.io/badge/Vite-6-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev)
 [![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-3-38B2AC?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
 [![Express](https://img.shields.io/badge/Express.js-Backend-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com)
-[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Hackathon](https://img.shields.io/badge/SBI_GFF_2026-Hackathon-orange?style=for-the-badge)](https://sbi-bice.vercel.app)
 
 <br/>
@@ -33,21 +30,19 @@ Traditional banking relies on reactive engagement — customers walk in, officer
 
 The result: branch officers spend less time analyzing spreadsheets and more time closing conversations that matter.
 
-<img src="screenshots/dashboard.png" alt="SahayakAI Dashboard" width="100%" />
-
 ---
 
 ## 🎯 The Problem
 
 Branch officers today are overwhelmed by noise and starved of signal.
 
-| Pain Point | Impact |
-|---|---|
-| Manual customer analysis | Hours wasted per day |
-| Missed cross-sell windows | Lost revenue opportunities |
-| Reactive fraud response | Financial loss already occurred |
-| No lead prioritization | Low-value conversations dominate |
-| No cash-flow foresight | Poor product-timing decisions |
+| Pain Point                | Impact                           |
+| ------------------------- | -------------------------------- |
+| Manual customer analysis  | Hours wasted per day             |
+| Missed cross-sell windows | Lost revenue opportunities       |
+| Reactive fraud response   | Financial loss already occurred  |
+| No lead prioritization    | Low-value conversations dominate |
+| No cash-flow foresight    | Poor product-timing decisions    |
 
 SahayakAI solves all five with a unified AI dashboard.
 
@@ -84,8 +79,14 @@ Customer Behaviour Data
 
 ## ✨ Features
 
-### 🏠 Dashboard
+### 🔐 Login
+Secure access for branch officers.
 
+<img src="screenshots/login.png" alt="Login Page" width="100%" />
+
+---
+
+### 🏠 Dashboard
 The command center for every branch officer.
 
 - Branch-wide performance overview
@@ -94,12 +95,11 @@ The command center for every branch officer.
 - Today's highest-priority customers
 - Real-time recommendation feed
 
-<img src="screenshots/dashboard-detail.png" alt="Dashboard Detail" width="100%" />
+<img src="screenshots/dashboard.png" alt="SahayakAI Dashboard" width="100%" />
 
 ---
 
 ### 📋 AI Recommendation Queue
-
 Every customer is ranked by AI confidence — no manual prioritization needed.
 
 - **High / Medium / Low** confidence segmentation
@@ -108,12 +108,11 @@ Every customer is ranked by AI confidence — no manual prioritization needed.
 - Outreach status tracking
 - One-click approval workflow
 
-<img src="screenshots/approval-queue.png" alt="Approval Queue" width="100%" />
+<img src="screenshots/alert-queue.png" alt="Approval Queue" width="100%" />
 
 ---
 
 ### 👤 Customer Intelligence
-
 Each customer gets a full AI profile, not just a name and account number.
 
 - AI confidence score (JeevanScore)
@@ -127,7 +126,6 @@ Each customer gets a full AI profile, not just a name and account number.
 ---
 
 ### 🛡️ Scam Monitor
-
 Real-time fraud interception before money moves.
 
 **Detects:**
@@ -145,12 +143,11 @@ Real-time fraud interception before money moves.
 - Amount protected
 - One-click fraud reporting workflow
 
-<img src="screenshots/scam-monitor.png" alt="Scam Monitor" width="100%" />
+<img src="screenshots/scam-log.png" alt="Scam Monitor" width="100%" />
 
 ---
 
 ### 📈 Analytics Dashboard
-
 Branch-level performance analytics in one view.
 
 - Product activation rate
@@ -165,7 +162,6 @@ Branch-level performance analytics in one view.
 ---
 
 ### 🧠 MirrorMind — Predictive Intelligence Engine
-
 The brain behind SahayakAI's timing decisions.
 
 MirrorMind analyses historical transaction patterns to forecast:
@@ -178,46 +174,41 @@ MirrorMind analyses historical transaction patterns to forecast:
 
 Branch officers can now contact customers **before** they need financial help — not after.
 
-<img src="screenshots/mirror-mind.png" alt="MirrorMind" width="100%" />
-
 ---
 
 ### 👥 Customer Directory
-
 A complete view of all monitored customers.
 
-| Column | Description |
-|---|---|
-| AI Score | JeevanScore confidence value |
+| Column          | Description                   |
+| --------------- | ----------------------------- |
+| AI Score        | JeevanScore confidence value  |
 | Approval Status | Pending / Approved / Rejected |
-| Branch | Assigned branch |
-| Risk Category | Low / Medium / High |
-| Quick Actions | View, Approve, Flag |
-
-<img src="screenshots/customers.png" alt="Customer Directory" width="100%" />
+| Branch          | Assigned branch               |
+| Risk Category   | Low / Medium / High           |
+| Quick Actions   | View, Approve, Flag           |
 
 ---
 
 ## ⚙️ Tech Stack
 
 ### Frontend
-| Tool | Purpose |
-|---|---|
-| React 18 | UI framework |
-| Vite 6 | Build tool & dev server |
-| Tailwind CSS 3 | Styling |
-| React Router | Client-side navigation |
-| Framer Motion | Animations |
-| Recharts | Data visualizations |
-| Lucide Icons | Icon system |
+| Tool           | Purpose                 |
+| -------------- | ----------------------- |
+| React 18       | UI framework            |
+| Vite 6         | Build tool & dev server |
+| Tailwind CSS 3 | Styling                 |
+| React Router   | Client-side navigation  |
+| Framer Motion  | Animations              |
+| Recharts       | Data visualizations     |
+| Lucide Icons   | Icon system             |
 
 ### Backend
-| Tool | Purpose |
-|---|---|
-| Node.js | Runtime |
-| Express.js | API server |
-| CORS | Cross-origin handling |
-| dotenv | Environment config |
+| Tool       | Purpose               |
+| ---------- | --------------------- |
+| Node.js    | Runtime               |
+| Express.js | API server            |
+| CORS       | Cross-origin handling |
+| dotenv     | Environment config    |
 
 ---
 
@@ -240,8 +231,7 @@ sbi/
     │   ├── routes/             # API route handlers
     │   └── package.json
     │
-    ├── screenshots/            # UI screenshots
-    └── README.md
+    └── screenshots/            # UI screenshots
 ```
 
 ---
@@ -358,16 +348,16 @@ Generates personalized product recommendations for each customer based on their 
 
 Built for **SBI GFF 2026 Hackathon**
 
-| Feature | Status |
-|---|---|
-| AI Recommendation Queue | ✅ Complete |
-| Predictive Cash Flow (MirrorMind) | ✅ Complete |
-| Fraud Detection Dashboard | ✅ Complete |
+| Feature                             | Status     |
+| ----------------------------------- | ---------- |
+| AI Recommendation Queue             | ✅ Complete |
+| Predictive Cash Flow (MirrorMind)   | ✅ Complete |
+| Fraud Detection Dashboard           | ✅ Complete |
 | Customer Risk Scoring (JeevanScore) | ✅ Complete |
-| Analytics Dashboard | ✅ Complete |
-| Interactive UI with Animations | ✅ Complete |
-| Modular React Architecture | ✅ Complete |
-| RESTful Backend API | ✅ Complete |
+| Analytics Dashboard                 | ✅ Complete |
+| Interactive UI with Animations      | ✅ Complete |
+| Modular React Architecture          | ✅ Complete |
+| RESTful Backend API                 | ✅ Complete |
 
 ---
 
