@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { ChevronDown, ChevronUp, Zap, ShieldCheck } from 'lucide-react';
 import JeevanScoreGauge from '../components/dashboard/JeevanScoreGauge';
 import MirrorMindForecastChart from '../components/MirrorMindForecastChart';
+import DemoDataTag from '../components/DemoDataTag';
 import { useApp } from '../context/AppContext';
 import {
   formatCurrency,
@@ -179,6 +180,7 @@ export default function CustomerDetail() {
         </div>
         <div className="flex-1 min-w-0">
           <h1 className="font-display font-bold text-2xl">{customer.name}</h1>
+          <DemoDataTag className="mt-2 mb-1" />
           <div className="flex flex-wrap gap-2 mt-2">
             <span className="text-xs px-2 py-0.5 rounded-full bg-elevated border border-border text-muted">
               {customer.location}

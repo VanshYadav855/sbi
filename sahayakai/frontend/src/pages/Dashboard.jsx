@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Bell, Shield, TrendingUp, Users, Zap } from 'lucide-react';
 import WelcomeBanner from '../components/dashboard/WelcomeBanner';
 import ScamMonitor from '../components/dashboard/ScamMonitor';
+import DemoDataTag from '../components/DemoDataTag';
 import { useApp } from '../context/AppContext';
 import { useAlertQueue } from '../hooks/useAlertQueue';
 import { formatCurrency } from '../utils/format';
@@ -62,6 +63,7 @@ export default function Dashboard() {
   return (
     <div className="space-y-6">
       <WelcomeBanner />
+      <DemoDataTag className="mt-0" />
 
       {/* Hero */}
       <div className="glass-panel rounded-2xl p-6 lg:p-8 relative overflow-hidden">

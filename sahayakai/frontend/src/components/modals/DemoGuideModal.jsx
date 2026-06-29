@@ -5,25 +5,29 @@ const steps = [
     num: 1,
     icon: '🏠',
     title: 'Dashboard',
-    text: 'See the AI Recommendation Queue. Ramesh Patil has a JeevanScore of 91. SahayakAI already called him in Hindi and he said "Haan". Click Approve to disburse his Working Capital Loan.',
+    action: 'Approve Ramesh Patil\'s Working Capital Loan.',
+    payoff: 'He already said Haan on SahayakAI\'s Hindi call.',
   },
   {
     num: 2,
     icon: '👤',
     title: 'Customer Detail',
-    text: 'Click "View" on any customer card. See the full JeevanScore breakdown, MirrorMind 60-day forecast, and outreach timeline showing exactly what SahayakAI did.',
+    action: 'Click View on any customer card.',
+    payoff: 'See JeevanScore breakdown and MirrorMind forecast.',
   },
   {
     num: 3,
     icon: '🛡',
     title: 'Scam Monitor',
-    text: 'Click "Scam Monitor" in the sidebar. See real-time fraud interceptions. SahayakShield blocked 3 scam attempts today including one targeting Ramesh Patil right after his loan call.',
+    action: 'Open Scam Monitor in the sidebar.',
+    payoff: 'Watch SahayakShield block live fraud attempts.',
   },
   {
     num: 4,
     icon: '📊',
     title: 'Analytics',
-    text: 'Click "Analytics" in the sidebar. See performance KPIs: 2-3× activation rate, +35% cross-sell conversion, ₹1,23,500 protected from scams.',
+    action: 'Open Analytics for branch performance KPIs.',
+    payoff: 'See activation uplift and scam savings totals.',
   },
 ];
 
@@ -63,7 +67,8 @@ export default function DemoGuideModal({ open, onClose }) {
                   <p className="text-sm font-medium">
                     {step.icon} {step.title}
                   </p>
-                  <p className="text-xs text-muted mt-1 leading-relaxed">{step.text}</p>
+                  <p className="text-xs text-text-primary mt-1">{step.action}</p>
+                  <p className="text-xs text-muted mt-0.5 leading-relaxed">{step.payoff}</p>
                 </div>
               </div>
             ))}

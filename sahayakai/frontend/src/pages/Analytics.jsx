@@ -2,7 +2,24 @@ import { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { TrendingUp } from 'lucide-react';
 import { useApp } from '../context/AppContext';
-import { formatCurrency, getStatusColor, getScoreBucket } from '../utils/format';
+import DemoDataTag from '../components/DemoDataTag';
+import ForecastSparkline from '../components/ForecastSparkline';
+import { formatCurrency, getScoreBucket } from '../utils/format';
+
+function getPipelineStatusPill(status) {
+  switch (status) {
+    case 'PENDING_APPROVAL':
+      return 'text-saffron bg-saffron/15 border-saffron/30';
+    case 'APPROVED':
+      return 'text-success bg-success/15 border-success/30';
+    case 'MONITORING':
+      return 'text-teal bg-teal/15 border-teal/30';
+    case 'SUPPRESSED':
+      return 'text-muted bg-muted/10 border-muted/20';
+    default:
+      return 'text-muted bg-muted/10 border-muted/20';
+  }
+}
 
 function KpiValue({ value }) {
   return (
@@ -120,9 +137,7 @@ export default function Analytics() {
         <p className="text-sm text-muted mt-1">
           Branch: Nagpur · Officer: Amit Oberoi · June 2026
         </p>
-        <span className="inline-block mt-2 text-[10px] px-2 py-0.5 rounded bg-amber/10 text-amber border border-amber/20">
-          Demo data — Phase 1 Hackathon
-        </span>
+        <DemoDataTag />
       </div>
 
       {/* KPI Row */}
@@ -221,6 +236,7 @@ export default function Analytics() {
                 <th className="text-left px-4 py-3 text-xs text-muted">Forecast</th>
                 <th className="text-left px-4 py-3 text-xs text-muted">Optimal Window</th>
                 <th className="text-left px-4 py-3 text-xs text-muted">Recommended Product</th>
+                <th className="text-left px-4 py-3 text-xs text-muted">Trend</th>
                 <th className="text-left px-4 py-3 text-xs text-muted">Status</th>
               </tr>
             </thead>
@@ -235,8 +251,15 @@ export default function Analytics() {
                   <td className="px-4 py-3 text-xs">Next 12 days</td>
                   <td className="px-4 py-3 text-xs">{c.product || '—'}</td>
                   <td className="px-4 py-3">
+                    <ForecastSparkline
+                      weeklyForecast={c.mirrorMind?.weeklyForecast}
+                      peakWeek={c.mirrorMind?.surplusWeek}
+                      height={60}
+                    />
+                  </td>
+                  <td className="px-4 py-3">
                     <span
-                      className={`text-[10px] px-2 py-0.5 rounded border ${getStatusColor(c.status)}`}
+                      className={`text-[10px] px-2 py-0.5 rounded-full border font-medium ${getPipelineStatusPill(c.status)}`}
                     >
                       {c.status.replace(/_/g, ' ')}
                     </span>

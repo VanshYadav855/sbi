@@ -41,7 +41,10 @@ export function AppProvider({ children }) {
   );
 
   const addSimulatedCustomer = useCallback((customer) => {
-    setCustomerList((prev) => [customer, ...prev]);
+    setCustomerList((prev) => {
+      if (prev.some((c) => c.id === customer.id)) return prev;
+      return [customer, ...prev];
+    });
     setStats((prev) => ({
       ...prev,
       totalAlerts: prev.totalAlerts + 1,

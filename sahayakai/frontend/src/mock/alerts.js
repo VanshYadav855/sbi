@@ -1,7 +1,7 @@
 export const alertStats = {
-  pendingApprovals: 4,
-  scamsBlockedToday: 3,
-  offersAccepted: 5,
-  disbursedToday: 1,
-  totalAlerts: 8,
+  pendingApprovals: 10,
+  scamsBlockedToday: 5,
+  offersAccepted: 8,
+  disbursedToday: 3,
+  totalAlerts: 18,
 };

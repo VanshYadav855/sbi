@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import AlertQueue from '../components/dashboard/AlertQueue';
+import DemoDataTag from '../components/DemoDataTag';
 import { useAutoAdvance } from '../hooks/useAutoAdvance';
 
 export default function AlertQueuePage() {
@@ -17,6 +18,7 @@ export default function AlertQueuePage() {
               SahayakAI called these customers in their language with a relevant offer. Those who
               said &apos;Haan&apos; (Yes) are ready for your approval. Review and approve below.
             </p>
+            <DemoDataTag />
           </div>
           <Link
             to="/"

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useApp } from '../context/AppContext';
+import DemoDataTag from '../components/DemoDataTag';
 import JeevanScoreGauge from '../components/dashboard/JeevanScoreGauge';
 import { getAvatarColor, getStatusColor } from '../utils/format';
 
@@ -12,6 +13,7 @@ export default function Customers() {
         <h1 className="font-display font-bold text-xl text-text-primary">
           All Customers — Nagpur Branch · {customerList.length} accounts monitored by SahayakAI
         </h1>
+        <DemoDataTag />
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">

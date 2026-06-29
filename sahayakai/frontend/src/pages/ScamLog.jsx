@@ -2,6 +2,7 @@ import { useState, useMemo } from 'react';
 import { ShieldOff } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import { formatCurrency } from '../utils/format';
+import DemoDataTag from '../components/DemoDataTag';
 import ScamDetailModal from '../components/modals/ScamDetailModal';
 
 const FILTERS = ['All', 'BLOCKED', 'FLAGGED'];
@@ -44,6 +45,7 @@ export default function ScamLog() {
           SahayakShield automatically intercepts suspicious calls and messages targeting SBI
           customers. No customer action needed — blocks happen in real time.
         </p>
+        <DemoDataTag />
       </div>
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
