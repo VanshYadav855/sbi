@@ -82,7 +82,7 @@ Customer Behaviour Data
 ### 🔐 Login
 Secure access for branch officers.
 
-<img src="screenshots/login.png" alt="Login Page" width="100%" />
+<img src="screenshots/login-page.png" alt="Login Page" width="100%" />
 
 ---
 
@@ -143,7 +143,7 @@ Real-time fraud interception before money moves.
 - Amount protected
 - One-click fraud reporting workflow
 
-<img src="screenshots/scam-log.png" alt="Scam Monitor" width="100%" />
+<img src="screenshots/scam-monitor.png" alt="Scam Monitor" width="100%" />
 
 ---
 
@@ -173,6 +173,8 @@ MirrorMind analyses historical transaction patterns to forecast:
 - Best-fit product timing
 
 Branch officers can now contact customers **before** they need financial help — not after.
+
+<img src="screenshots/mirrormind.png" alt="MirrorMind" width="100%" />
 
 ---
 
